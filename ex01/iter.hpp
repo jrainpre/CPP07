@@ -11,8 +11,8 @@
 // • The second one is the length of the array.
 // • The third one is a function that will be call on every element of the array
 
-template <typename T>
-void iter(T *ptr, int count, void(*f)(T &))
+template <typename T ,typename T2>
+void iter(T *ptr, int count, void(*f)(T2 &))
 {
 	for (int i = 0; i < count; i++)
 		f(ptr[i]);

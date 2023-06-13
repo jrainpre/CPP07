@@ -5,7 +5,7 @@
 int main()
 {
 	Array<int> empty;
-	Array<std::string> strings(5);
+	const Array<std::string> strings(5);
 
 	strings[0] = "Hello";
 	strings[1] = "Test";

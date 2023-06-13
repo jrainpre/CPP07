@@ -30,7 +30,7 @@ public:
 
 	unsigned int size() const;
 	void print(std::ostream& stream) const;
-    T& operator[](unsigned int i);
+    T& operator[](unsigned int i) const;
 
 	//expection classes
 	class OutofRangeException : public std::exception
@@ -93,7 +93,7 @@ Array<T>::~Array()
 }
 
 template <typename T>
-T&	Array<T>::operator[](unsigned int i)
+T&	Array<T>::operator[](unsigned int i) const 
 {
 	if (i >= _size)
 		throw Array::OutofRangeException();
